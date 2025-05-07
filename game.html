@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruslex - Игровой мир</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/game.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+</head>
+<body>
+    <div class="game-container">
+        <header class="pixel-header">
+            <h1 class="pixel-logo">RUSLEX</h1>
+            <div class="health-bar">
+                <div class="health-fill" id="healthFill"></div>
+                <span class="health-text">ЗДОРОВЬЕ: <span id="healthValue">100</span>%</span>
+            </div>
+        </header>
+
+        <nav class="pixel-nav">
+            <button class="pixel-tab active" id="profileTab">ПРОФИЛЬ</button>
+            <button class="pixel-tab" id="chatTab">ЧАТ</button>
+        </nav>
+
+        <main class="game-main">
+            <!-- Профиль персонажа -->
+            <section class="game-section active" id="profileSection">
+                <div class="character-profile pixel-panel">
+                    <div class="profile-header">
+                        <div class="character-avatar">
+                            <div class="pixel-avatar" id="characterAvatar"></div>
+                        </div>
+                        <div class="character-info">
+                            <h2 class="pixel-title" id="characterName">ИМЯ ПЕРСОНАЖА</h2>
+                            <ul class="pixel-list">
+                                <li>УРОВЕНЬ: <span id="characterLevel">1</span></li>
+                                <li>КЛАСС: <span id="characterClass">ВОИН</span></li>
+                                <li>ОПЫТ: <span id="characterExp">0</span>/100</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="game-events pixel-panel">
+                        <h3 class="pixel-subtitle">СОБЫТИЯ</h3>
+                        <div class="event-log" id="eventLog">
+                            <!-- События будут добавляться здесь -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Чат -->
+            <section class="game-section" id="chatSection">
+                <div class="chat-container pixel-panel">
+                    <div class="chat-header">
+                        <h2 class="pixel-title">ЧАТ С ДРУЗЬЯМИ</h2>
+                    </div>
+                    <div class="chat-messages" id="chatMessages">
+                        <!-- Сообщения будут добавляться здесь -->
+                    </div>
+                    <div class="chat-input">
+                        <input type="text" id="messageInput" class="pixel-input" placeholder="Введите сообщение...">
+                        <button id="sendButton" class="pixel-button">ОТПРАВИТЬ</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="pixel-footer">
+            <p>© 2023 RUSLEX | ВЕРСИЯ 1.1.0</p>
+        </footer>
+    </div>
+
+    <script src="js/game.js"></script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+/* Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    image-rendering: pixelated;
+}
+
+body {
+    background-color: #1a1a2e;
+    color: #e6e6e6;
+    font-family: 'Press Start 2P', cursive;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.game-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Pixel Art Elements */
+.pixel-panel {
+    background-color: #16213e;
+    border: 4px solid #4a4a8a;
+    position: relative;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.pixel-panel::before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    border: 2px solid #f05454;
+    pointer-events: none;
+}
+
+/* Header Styles */
+.pixel-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.pixel-logo {
+    font-size: 3rem;
+    color: #f05454;
+    text-shadow: 4px 4px 0 #0f3460;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.pixel-subtitle {
+    font-size: 1rem;
+    color: #4a9c8d;
+}
+
+/* Main Content Layout */
+.pixel-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+    .pixel-main {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Form Styles */
+.character-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.pixel-title {
+    color: #f05454;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    flex: 1;
+}
+
+.full-width {
+    width: 100%;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #4a9c8d;
+    font-size: 0.7rem;
+}
+
+.pixel-input, .pixel-select {
+    width: 100%;
+    padding: 10px;
+    background-color: #0f3460;
+    border: 2px solid #4a4a8a;
+    color: #e6e6e6;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.7rem;
+}
+
+.pixel-input:focus, .pixel-select:focus {
+    outline: none;
+    border-color: #f05454;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Character Display */
+.character-display {
+    display: flex;
+    flex-direction: column;
+}
+
+.character-preview {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a1a2e;
+    margin-bottom: 20px;
+    min-height: 200px;
+}
+
+.pixel-art-placeholder {
+    text-align: center;
+    color: #4a9c8d;
+    font-size: 0.8rem;
+    line-height: 2;
+}
+
+.character-stats {
+    border-top: 2px solid #4a4a8a;
+    padding-top: 15px;
+}
+
+.pixel-list {
+    list-style-type: none;
+    font-size: 0.7rem;
+}
+
+.pixel-list li {
+    margin-bottom: 8px;
+    color: #4a9c8d;
+}
+
+.pixel-list span {
+    color: #e6e6e6;
+}
+
+/* Button Styles */
+.pixel-button {
+    background-color: #f05454;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.7rem;
+    cursor: pointer;
+    box-shadow: 4px 4px 0 #0f3460;
+    transition: all 0.1s;
+}
+
+.pixel-button:hover {
+    background-color: #ff7676;
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 #0f3460;
+}
+
+.pixel-button:active {
+    transform: translate(4px, 4px);
+    box-shadow: none;
+}
+
+/* Footer Styles */
+.pixel-footer {
+    text-align: center;
+    font-size: 0.6rem;
+    color: #4a4a8a;
+    padding: 15px;
+}

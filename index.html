@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruslex</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+    <link rel="apple-touch-icon" href="./icon.png">
+    <link rel="icon" href="./icon.png" type="image/x-icon">
+</head>
+<body>
+    <div class="game-container">
+        <header class="pixel-header">
+            <h1 class="pixel-logo">RUSLEX</h1>
+            <p class="pixel-subtitle">УЧИ РУССКИЙ В ПИКСЕЛЬНОМ МИРЕ</p>
+        </header>
+
+        <main class="pixel-main">
+            <section class="character-form pixel-panel">
+                <h2 class="pixel-title">НАСТРОЙКИ ПЕРСОНАЖА</h2>
+                
+                <form id="characterForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">ИМЯ</label>
+                            <input type="text" id="name" class="pixel-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="gender">ПОЛ</label>
+                            <select id="gender" class="pixel-select">
+                                <option value="male">МУЖСКОЙ</option>
+                                <option value="female">ЖЕНСКИЙ</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="age">ВОЗРАСТ</label>
+                            <input type="number" id="age" class="pixel-input" min="10" max="99">
+                        </div>
+                        <div class="form-group">
+                            <label for="profession">ПРОФЕССИЯ</label>
+                            <select id="profession" class="pixel-select">
+                                <option value="engineer">ИНЖЕНЕР</option>
+                                <option value="doctor">ВРАЧ</option>
+                                <option value="teacher">УЧИТЕЛЬ</option>
+                                <option value="lawyer">ЮРИСТ</option>
+                                <option value="programmer">ПРОГРАММИСТ</option>
+                                <option value="designer">ДИЗАЙНЕР</option>
+                                <option value="manager">МЕНЕДЖЕР</option>
+                                <option value="accountant">БУХГАЛТЕР</option>
+                                <option value="driver">ВОДИТЕЛЬ</option>
+                                <option value="cook">ПОВАР</option>
+                                <option value="builder">СТРОИТЕЛЬ</option>
+                                <option value="salesperson">ПРОДАВЕЦ</option>
+                                <option value="military">ВОЕННЫЙ</option>
+                                <option value="police">ПОЛИЦЕЙСКИЙ</option>
+                                <option value="artist">ХУДОЖНИК</option>
+                                <option value="musician">МУЗЫКАНТ</option>
+                                <option value="farmer">ФЕРМЕР</option>
+                                <option value="nurse">МЕДСЕСТРА</option>
+                                <option value="scientist">УЧЁНЫЙ</option>
+                                <option value="entrepreneur">ПРЕДПРИНИМАТЕЛЬ</option>
+                            </select>
+                        </div>                        
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="height">РОСТ (см)</label>
+                            <input type="number" id="height" class="pixel-input" min="100" max="250">
+                        </div>
+                        <div class="form-group">
+                            <label for="weight">ВЕС (кг)</label>
+                            <input type="number" id="weight" class="pixel-input" min="30" max="200">
+                        </div>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="education">ОБРАЗОВАНИЕ</label>
+                        <select id="education" class="pixel-select">
+                            <option value="school">СРЕДНЕЕ</option>
+                            <option value="college">СРЕДНЕЕ СПЕЦИАЛЬНОЕ</option>
+                            <option value="bachelor">БАКАЛАВР</option>
+                            <option value="incomplete_bachelor">НЕОКОНЧЕННОЕ ВЫСШЕЕ</option>
+                            <option value="master">МАГИСТРАТУРА</option>
+                            <option value="postgraduate">АСПИРАНТУРА</option>
+                            <option value="phd">КАНДИДАТ НАУК</option>
+                            <option value="doctor">ДОКТОР НАУК</option>
+                            <option value="additional">ДОПОЛНИТЕЛЬНОЕ ОБРАЗОВАНИЕ</option>
+                            <option value="self_education">САМООБРАЗОВАНИЕ</option>
+                        </select>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="pixel-button" id="saveBtn">СОХРАНИТЬ</button>
+                        <button type="button" class="pixel-button" id="startBtn">НАЧАТЬ ИГРУ</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="character-display pixel-panel">
+                <div class="character-preview">
+                    <div class="pixel-art-placeholder">
+                        <span>ПЕРСОНАЖ</span>
+                        <span>В РАЗРАБОТКЕ</span>
+                    </div>
+                </div>
+                <div class="character-stats">
+                    <h3 class="pixel-subtitle">СТАТИСТИКА</h3>
+                    <ul class="pixel-list">
+                        <li>ИМЯ: <span id="displayName">-</span></li>
+                        <li>ПОЛ: <span id="displayGender">-</span></li>
+                        <li>ВОЗРАСТ: <span id="displayAge">-</span></li>
+                        <li>ПРОФЕССИЯ: <span id="displayProf">-</span></li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <footer class="pixel-footer">
+            <p>© 2025 RUSLEX | ВСЕ ПРАВА ЗАЩИЩЕНЫ</p>
+        </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
