@@ -139,12 +139,6 @@ label {
     margin-top: 20px;
 }
 
-/* Character Display @TODO */
-/* .character-display {
-    display: flex;
-    flex-direction: column;
-} */
-
 .character-preview {
     flex: 1;
     display: flex;
