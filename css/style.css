@@ -26,6 +26,8 @@ body {
     position: relative;
     padding: 20px;
     margin-bottom: 20px;
+    width: 94%;
+    max-width: 768px;
 }
 
 .pixel-panel::before {
@@ -60,16 +62,10 @@ body {
 
 /* Main Content Layout */
 .pixel-main {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     margin-bottom: 30px;
-}
-
-@media (max-width: 768px) {
-    .pixel-main {
-        grid-template-columns: 1fr;
-    }
 }
 
 /* Form Styles */
@@ -116,6 +112,21 @@ label {
     font-size: 0.7rem;
 }
 
+.pixel-select {
+    /* 关键样式修复 */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+    cursor: pointer;
+
+    /* 添加以下关键属性来确保 padding 生效 */
+    box-sizing: border-box;
+    min-height: calc(0.7rem + 2 * 10px + 4px); /* font-size + padding*2 + border*2 */
+}
+
 .pixel-input:focus, .pixel-select:focus {
     outline: none;
     border-color: #f05454;
@@ -128,11 +139,11 @@ label {
     margin-top: 20px;
 }
 
-/* Character Display */
-.character-display {
+/* Character Display @TODO */
+/* .character-display {
     display: flex;
     flex-direction: column;
-}
+} */
 
 .character-preview {
     flex: 1;
@@ -172,6 +183,7 @@ label {
 
 /* Button Styles */
 .pixel-button {
+    width: 100%;
     background-color: #f05454;
     color: white;
     border: none;
